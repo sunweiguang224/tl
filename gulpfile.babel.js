@@ -99,7 +99,7 @@ gulp.task('task_sprite', () => {
       var baseName = iconDir.substring(iconDir.lastIndexOf('/') + 1);
       var stream = gulp.src(iconDir + '/*')
         .pipe(spritesmith({
-          cssTemplate: './spritesmith.css.hbs',
+          cssTemplate: './spritesmith.css.pc.hbs',
           padding: 10,
           layout: 'top-down',
           imgName: baseName + '.png',
@@ -109,7 +109,7 @@ gulp.task('task_sprite', () => {
       merged.add(stream.css.pipe(gulp.dest(iconDir + '/../../css/')));
     }
   });
-  return merged;  // 保证顺序执行
+  return merged.isEmpty() ? null : merged;  // 保证顺序执行
 });
 
 // ************************************ 编译图片 ************************************
