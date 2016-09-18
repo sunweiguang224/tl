@@ -1,0 +1,10 @@
+# 此为注释 – 将被 Git 忽略
+/node_modules
+/src/.temp
+/.idea
+/dist
+/dev
+/npm-debug.log
+/.temp
+/rev-manifest.json
+
