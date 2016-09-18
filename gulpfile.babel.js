@@ -92,7 +92,9 @@ gulp.task('task_sprite', () => {
   console.log('>>>>>>>>>>>>>>> 开始合成雪碧图。' + getNow());
   //var dirs = fs.readdirSync(Path.src.sprite);
   var merged = mergeStream();
-  var iconDirs = glob.sync(path.normalize(Path.src.icon + '/..'));
+  var iconDirs = glob.sync(path.normalize(Path.src.icon.module + '/..'));
+  iconDirs = iconDirs.concat(glob.sync(path.normalize(Path.src.icon.common + '/..')));
+  console.log(iconDirs)
   iconDirs.forEach(function(iconDir){
     console.log(iconDir)
     if(fs.statSync(iconDir).isDirectory()){
@@ -235,7 +237,8 @@ gulp.task('default', [], () => {
 			], ['task_img_dev']);
       // 监视图标变化
 			gulp.watch([
-				Path.src.icon
+				Path.src.icon.module,
+				Path.src.icon.common
 			], function(){
         runSequence('task_sprite', ['task_css_dev', 'task_img_dev'])
       });
@@ -327,8 +330,10 @@ gulp.task('create', () => {
 			.pipe(replace('${{author}}', answer.author))
 			.pipe(gulp.dest(newModulePath))
 			.on('end', function(){
-				fs.mkdir(newModulePath + '/img');
-				fs.mkdir(newModulePath + '/img/icon');
+        setTimeout(function(){
+          fs.mkdirSync(newModulePath + '/img');
+          fs.mkdirSync(newModulePath + '/img/icon');
+        }, 1000);
 			})
 		;
 		console.log('>>>>>>>>>>>>>>> '+answer.module+'模块'+file+'文件创建完毕。' + getNow());

@@ -1,0 +1,98 @@
+// book 图片:
+$book-width: (17px);
+$book-height: (20px);
+$book-bg-image: url(../img/icon.png);
+$book-bg-position: (-30px) (0px);
+$book-bg-size: (94px) (75px);
+.i-book{
+  display: inline-block;
+  width: $book-width;
+  height: $book-height;
+  background: $book-bg-image $book-bg-position no-repeat;
+  background-size: $book-bg-size;
+}
+
+// comment 图片:
+$comment-width: (16px);
+$comment-height: (16px);
+$comment-bg-image: url(../img/icon.png);
+$comment-bg-position: (-30px) (-30px);
+$comment-bg-size: (94px) (75px);
+.i-comment{
+  display: inline-block;
+  width: $comment-width;
+  height: $comment-height;
+  background: $comment-bg-image $comment-bg-position no-repeat;
+  background-size: $comment-bg-size;
+}
+
+// horn 图片:
+$horn-width: (20px);
+$horn-height: (19px);
+$horn-bg-image: url(../img/icon.png);
+$horn-bg-position: (0px) (0px);
+$horn-bg-size: (94px) (75px);
+.i-horn{
+  display: inline-block;
+  width: $horn-width;
+  height: $horn-height;
+  background: $horn-bg-image $horn-bg-position no-repeat;
+  background-size: $horn-bg-size;
+}
+
+// inputPass 图片:
+$inputPass-width: (13px);
+$inputPass-height: (20px);
+$inputPass-bg-image: url(../img/icon.png);
+$inputPass-bg-position: (-81px) (0px);
+$inputPass-bg-size: (94px) (75px);
+.i-inputPass{
+  display: inline-block;
+  width: $inputPass-width;
+  height: $inputPass-height;
+  background: $inputPass-bg-image $inputPass-bg-position no-repeat;
+  background-size: $inputPass-bg-size;
+}
+
+// inputUser 图片:
+$inputUser-width: (14px);
+$inputUser-height: (20px);
+$inputUser-bg-image: url(../img/icon.png);
+$inputUser-bg-position: (-57px) (0px);
+$inputUser-bg-size: (94px) (75px);
+.i-inputUser{
+  display: inline-block;
+  width: $inputUser-width;
+  height: $inputUser-height;
+  background: $inputUser-bg-image $inputUser-bg-position no-repeat;
+  background-size: $inputUser-bg-size;
+}
+
+// notebook 图片:
+$notebook-width: (18px);
+$notebook-height: (20px);
+$notebook-bg-image: url(../img/icon.png);
+$notebook-bg-position: (0px) (-29px);
+$notebook-bg-size: (94px) (75px);
+.i-notebook{
+  display: inline-block;
+  width: $notebook-width;
+  height: $notebook-height;
+  background: $notebook-bg-image $notebook-bg-position no-repeat;
+  background-size: $notebook-bg-size;
+}
+
+// redStar 图片:
+$redStar-width: (16px);
+$redStar-height: (16px);
+$redStar-bg-image: url(../img/icon.png);
+$redStar-bg-position: (0px) (-59px);
+$redStar-bg-size: (94px) (75px);
+.i-redStar{
+  display: inline-block;
+  width: $redStar-width;
+  height: $redStar-height;
+  background: $redStar-bg-image $redStar-bg-position no-repeat;
+  background-size: $redStar-bg-size;
+}
+

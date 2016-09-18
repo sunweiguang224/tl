@@ -1,6 +1,6 @@
 /**
- * 页面: 
- * 功能描述: 
+ * 页面: 首页
+ * 功能描述: 首页
  * 作者: swg
  */
 var helper = require('helper');
@@ -17,6 +17,3 @@ function Biz() {
 
 }
 new Biz();
-
-
-

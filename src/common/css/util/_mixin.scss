@@ -1,6 +1,15 @@
 @charset "UTF-8";
 
 /*
+  功能：单行文本垂直居中
+  @param {number} $height 高度.
+*/
+@mixin height($height) {
+  height: $height;
+  line-height: $height;
+}
+
+/*
   功能：文本溢出显示省略号
   @param {number} $line 文本行数.
 */
@@ -23,8 +32,9 @@
   @param {number} $length 边长.
 */
 @mixin square($length) {
+  display: inline-block;
   width: $length;
-  height: $length;
+  @include height($length);
 }
 
 /*
@@ -34,15 +44,6 @@
 @mixin circle($radius) {
   @include square($radius * 2);
   border-radius: $radius;
-}
-
-/*
-  功能：单行文本垂直居中
-  @param {number} $height 高度.
-*/
-@mixin height($height) {
-  height: $height;
-  line-height: $height;
 }
 
 /*
@@ -79,7 +80,13 @@
   }
 }
 
-@mixin mask($opacity: 0.2) {
+/*
+  功能：蒙层
+  @param {number} $zIndex 控制在目标元素上方或下方显示.
+  @param {color} $backgroundColor 颜色.
+  @param {float} $opacity 不同明度.
+*/
+@mixin mask($zIndex: 1, $backgroundColor: black, $opacity: 0.2) {
   position: relative;
   &:before {
     position: absolute;
@@ -87,8 +94,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
+    background-color: $backgroundColor;
     opacity: $opacity;
     content: '';
+    z-index: $zIndex;
+  }
+}
+
+/*子元素垂直居中*/
+@mixin childrenVA($vAlign: middle){
+  > *{
+    display: inline-block;
+    vertical-align: $vAlign;
   }
 }

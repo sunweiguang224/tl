@@ -10,6 +10,8 @@ body {
 
 ul {
   list-style-position: inside;
+  padding-left: 0;  // 去掉_normalize.scss中的padding-left: 40px;
+  margin: 0;  // 去掉_normalize.scss中的margin: 14px;
 }
 
 a {

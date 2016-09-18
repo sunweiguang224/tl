@@ -1,5 +1,7 @@
 @charset "UTF-8";
+@import 'util/variable';
 @import './lib/_normalize';
+@import '_icon';
 
 /*样式重置*/
 body {
@@ -10,6 +12,8 @@ body {
 
 ul {
   list-style-position: inside;
+  padding-left: 0;  // 去掉_normalize.scss中的padding-left: 40px;
+  margin: 0;  // 去掉_normalize.scss中的margin: 14px;
 }
 
 a {
@@ -29,7 +33,6 @@ iframe {
 
 /*外层容器*/
 .g-container {
-  width: 1000px;
+  width: $gContainerWith;
 }
-
 

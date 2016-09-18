@@ -1,0 +1,28 @@
+// login 图片:
+$login-width: (19px);
+$login-height: (20px);
+$login-bg-image: url(../img/icon.png);
+$login-bg-position: (-106px) (0px);
+$login-bg-size: (125px) (97px);
+.i-login{
+  display: inline-block;
+  width: $login-width;
+  height: $login-height;
+  background: $login-bg-image $login-bg-position no-repeat;
+  background-size: $login-bg-size;
+}
+
+// logo 图片:
+$logo-width: (96px);
+$logo-height: (97px);
+$logo-bg-image: url(../img/icon.png);
+$logo-bg-position: (0px) (0px);
+$logo-bg-size: (125px) (97px);
+.i-logo{
+  display: inline-block;
+  width: $logo-width;
+  height: $logo-height;
+  background: $logo-bg-image $logo-bg-position no-repeat;
+  background-size: $logo-bg-size;
+}
+
