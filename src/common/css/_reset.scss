@@ -1,12 +1,7 @@
-@charset "UTF-8";
-@import 'util/variable';
-@import './lib/_normalize';
-@import '_icon';
-
 /*样式重置*/
 body {
   font-family: "微软雅黑", Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: .33rem;
   line-height: 1.5;
 }
 
@@ -30,9 +25,3 @@ img {
 iframe {
   border: none;
 }
-
-/*外层容器*/
-.g-container {
-  width: $gContainerWith;
-}
-

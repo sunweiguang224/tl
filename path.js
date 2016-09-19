@@ -29,9 +29,19 @@ Path.src = {
 		common: Path.srcRoot + '/*common/js/*.js',	// 由nodejs负责
 		module: Path.srcRoot + '/*module/'+moduleName+'/js/*.js'		// 由webpack负责
 	},
-	generator: [
-		'generator/*.html',
-		'generator/*/*'
-	]
+	generator: {
+    mobile: [
+      'generator/mobile/*.html',
+      'generator/mobile/*/*'
+    ],
+    pc: [
+      'generator/pc/*.html',
+      'generator/pc/*/*'
+    ]
+  }
 };
+
+/*默认无值移动端*/
+Path.env = 'pc';
+
 module.exports = Path;

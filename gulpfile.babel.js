@@ -101,7 +101,7 @@ gulp.task('task_sprite', () => {
       var baseName = iconDir.substring(iconDir.lastIndexOf('/') + 1);
       var stream = gulp.src(iconDir + '/*')
         .pipe(spritesmith({
-          cssTemplate: './spritesmith.css.pc.hbs',
+          cssTemplate: './spritesmith.css'+(Path.env == 'pc' ? '.pc' : '')+'.hbs',
           padding: 10,
           layout: 'top-down',
           imgName: baseName + '.png',
@@ -319,7 +319,7 @@ gulp.task('create', () => {
 		console.log(answer);
 		var newModulePath = Path.srcRoot + '/module/'+answer.module,
 			file = answer.file || answer.module;
-		gulp.src(Path.src.generator)
+		gulp.src(Path.env == 'pc' ? Path.src.generator.pc : Path.src.generator.mobile)
 			.pipe(rename({
 				basename: file
 			}))
