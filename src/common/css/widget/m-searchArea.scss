@@ -1,0 +1,42 @@
+@import '../util/variable';
+@import '../util/_mixin';
+
+/*搜索栏*/
+.m-searchArea{
+  height: 110px;
+  background-color: $pannelColor;
+}
+.m-searchArea-keywords{
+  padding: 30px 102px 0;
+  color: #666;
+  .keyword{
+    margin-right: 20px;
+    cursor: pointer;
+    &:hover{
+      color: #107ac4;
+    }
+  }
+}
+.m-searchArea-searchBox{
+  margin-top: 5px;
+  padding-left: 100px;
+  @include children-va(top);
+  input{
+    @include height(36px);
+    width: 578px;
+    border: 1px solid #cdcccc;
+    outline: none;
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  .btn{
+    @include btn;
+    @include height(36px);
+    width: 46px;
+    background-color: #107ac4;
+    border: 1px solid #cdcccc;
+    color: #fff;
+    margin-left: -5px;
+  }
+  @include click-effect('.btn');
+}

@@ -1,4 +1,19 @@
 @charset "UTF-8";
 @import '../../../common/css/util/variable';
 @import '../../../common/css/util/_mixin';
+@import '../../../common/css/widget/m-searchArea';
 @import '_icon';
+
+/*中间区域*/
+.g-middle{
+  padding-top: 11px;
+}
+.g-middle-left{
+  width: 849px;
+}
+.g-middle-right{
+  width: 282px;
+}
+
+
+

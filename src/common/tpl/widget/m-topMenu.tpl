@@ -1,11 +1,11 @@
 <!--顶部菜单-->
-<div class="topMenu">
-  <div class="topMenu-content">
-      <span class="topMenu-content-logo">
+<div class="m-topMenu">
+  <div class="m-topMenu-content">
+      <span class="m-topMenu-content-logo">
         <i class="i-logo"></i>
         <span class="title">标准管理系统</span>
       </span>
-    <ul class="topMenu-content-menu">
+    <ul class="m-topMenu-content-menu">
       <li class="item"><a href="">首页</a></li>
       <li class="item"><a href="">标准管理</a></li>
       <li class="item">
@@ -24,9 +24,9 @@
       </li>
       <li class="item"><a href="">资料下载</a></li>
     </ul>
-      <span class="topMenu-content-login">
+      <span class="m-topMenu-content-login">
         <i class="i-login">
-          <span class="topMenu-content-login-num">4</span>
+          <span class="m-topMenu-content-login-num">4</span>
         </i>
         <a href="">登陆</a>
       </span>

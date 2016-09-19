@@ -101,10 +101,23 @@
   }
 }
 
-/*子元素垂直居中*/
-@mixin childrenVA($vAlign: middle){
+/*
+  功能：子元素设为inline-block并垂直对齐
+  @param {top|middle|bottom} $vAlign 对齐方式
+*/
+@mixin children-va($vAlign: middle){
   > *{
     display: inline-block;
     vertical-align: $vAlign;
   }
+}
+
+/*
+  功能：基本按钮
+  @param {top|middle|bottom} $vAlign 对齐方式
+*/
+@mixin btn(){
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
 }

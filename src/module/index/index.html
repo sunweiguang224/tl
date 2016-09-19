@@ -4,14 +4,21 @@
 	<title>首页</title>
 	<meta name="keywords" content="首页"/>
 	<meta name="description" content="首页"/>
-	@@include('meta.tpl')
+	@@include('html/meta.pc.tpl')
   <link rel="stylesheet" href="{{path}}/common/css/common.pc{{min}}.css">
 	<link rel="stylesheet" href="{{path}}/module/index/css/index{{min}}.css">
 </head>
 <body>
-  @@include('topMenu.tpl')
+  @@include('widget/m-topMenu.tpl')
 	<div class="g-container">
+    <div class="g-middle">
+      <div class="g-middle-left">
+        @@include('widget/m-searchArea.tpl')
+      </div>
+      <div class="g-middle-right">
 
+      </div>
+    </div>
 	</div>
 	<script src="{{path}}/common/js/common.bundle{{min}}.js"></script>
 	<script src="{{path}}/module/index/js/index.bundle{{min}}.js"></script>

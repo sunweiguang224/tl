@@ -184,7 +184,7 @@ function compileHtml(options){
   return gulp.src(options.src)
     .pipe(fileInclude({
       prefix: '@@',
-      basepath: __dirname + '/src/common/tpl/html/'
+      basepath: __dirname + '/src/common/tpl/'
     }))
     .pipe(replace('{{path}}', '../..'))
     .pipe(replace('{{min}}', options.compress))

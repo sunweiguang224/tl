@@ -1,0 +1,87 @@
+@import '../util/variable';
+@import '../util/_mixin';
+
+/*顶部菜单*/
+$topMenuHeight: 100px;
+.m-topMenu {
+  background: #034da2;
+  color: #fff;
+  min-width: $gContainerWith;
+}
+
+.m-topMenu-content {
+  margin: auto;
+  width: $gContainerWith;
+  @include children-va(top);
+}
+
+.m-topMenu-content-logo {
+  @include children-va;
+  .title {
+    font-size: 30px;
+  }
+}
+
+.m-topMenu-content-menu {
+  margin-left: 100px;
+  list-style: none;
+  vertical-align: bottom;
+  text-align: center;
+  font-size: 16px;
+  @include children-va(top);
+  .item {
+    display: inline-block;
+    width: 115px;
+    @include height(90px);
+    padding-top: 6px;
+    .subItem {
+      list-style: none;
+      padding: 10px 0;
+      @include mask(-1, #00397a, 0.8);
+      z-index: 1;
+      display: none;
+      li {
+        @include height(46px);
+        font-size: 14px;
+        &:hover {
+          color: #ffab09;
+        }
+      }
+    }
+    &:hover {
+      background: #00397a;
+      cursor: pointer;
+      @include mask(-1, #00397a, 0.8);
+      .subItem {
+        display: block;
+      }
+    }
+  }
+}
+
+.m-topMenu-content-login {
+  @include height(90px);
+  vertical-align: bottom;
+  float: right;
+  margin-top: 8px;
+  i {
+    position: relative;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-bottom: 7px;
+    line-height: 14px;
+  }
+}
+
+.m-topMenu-content-login-num {
+  position: absolute;
+  right: -7px;
+  top: -4px;
+  @include square(14px);
+  border-radius: 4px;
+  background-color: #ffab09;
+  font-size: 12px;
+  text-align: left;
+  padding-left: 2px;
+  padding-bottom: 1px;
+}
