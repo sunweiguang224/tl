@@ -17,7 +17,7 @@
       </li>
       <li class="item">
         信息管理
-        <ul>
+        <ul class="subItem">
           <li><a href="">公告管理</a></li>
           <li><a href="">信息反馈</a></li>
         </ul>

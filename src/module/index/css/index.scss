@@ -9,11 +9,98 @@
   padding-top: 11px;
 }
 .g-middle-left{
+  float: left;
   width: 849px;
 }
 .g-middle-right{
+  float: right;
   width: 282px;
 }
 
+/*文章区域*/
+.g-middle-left-articles{
+  .tab{
+    $darkColor: #107ac4;
+    margin-top: 10px;
+    border-bottom: 3px solid $darkColor;
+    overflow: hidden;
+    color: $darkColor;
+    .sheet{
+      display: inline-block;
+      margin-right: 10px;
+      height: 34px;
+      line-height: 38px;
+      padding: 0 30px 0 10px;
+      background-color: $pannelColor;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 0 3px #e3e3e3;
+      vertical-align: bottom;
+      &:before{
+        content: '';
+        @include i-notebook;
+        vertical-align: middle;
+        margin-top: -6px;
+        margin-right: 10px;
+        visibility: hidden;
+      }
+      &:hover, &.seleted{
+        background: $darkColor;
+        color: $pannelColor;
+        &:before{
+          visibility: visible;
+        }
+      }
+    }
+    .more{
+      display: inline-block;
+      height: 34px;
+      line-height: 38px;
+      float: right;
+    }
+  }
+}
 
-
+.g-middle-right-top{
+  height: 260px;
+  padding: 20px;
+  background-color: $pannelColor;
+}
+.g-middle-right-login{
+  p{
+    @include children-va;
+  }
+  input{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    @include height(38px);
+    border: 1px solid #e6e5e5;
+    border-radius: 3px;
+    padding: 0 8px 0 36px;
+    margin-bottom: 10px;
+  }
+  input.username{
+    background: url(../img/inputUser.png) no-repeat 11px 9px;
+  }
+  input.password{
+    background: url(../img/inputPass.png) no-repeat 12px 9px;
+  }
+  input.code{
+    width: 108px;
+    padding: 0 10px;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  .loginBtn{
+    margin-top: 30px;
+    @include height(40px);
+    background-color: #ffab09;
+    color: #fff;
+    font-size: 14px;
+    @include btn;
+    width: 100%;
+    border-radius: 4px;
+  }
+  @include click-effect('.loginBtn');
+}

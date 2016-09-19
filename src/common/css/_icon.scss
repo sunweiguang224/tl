@@ -1,10 +1,38 @@
+// comment 图片:
+$comment-width: (16px);
+$comment-height: (16px);
+$comment-bg-image: url(../img/icon.png);
+$comment-bg-position: (-106px) (-36px);
+$comment-bg-size: (132px) (97px);
+.i-comment{
+  display: inline-block;
+  width: $comment-width;
+  height: $comment-height;
+  background: $comment-bg-image $comment-bg-position no-repeat;
+  background-size: $comment-bg-size;
+}
+@mixin i-comment(){
+  display: inline-block;
+  width: $comment-width;
+  height: $comment-height;
+  background: $comment-bg-image $comment-bg-position no-repeat;
+  background-size: $comment-bg-size;
+}
+
 // login 图片:
-$login-width: (19px);
-$login-height: (20px);
+$login-width: (26px);
+$login-height: (26px);
 $login-bg-image: url(../img/icon.png);
 $login-bg-position: (-106px) (0px);
-$login-bg-size: (125px) (97px);
+$login-bg-size: (132px) (97px);
 .i-login{
+  display: inline-block;
+  width: $login-width;
+  height: $login-height;
+  background: $login-bg-image $login-bg-position no-repeat;
+  background-size: $login-bg-size;
+}
+@mixin i-login(){
   display: inline-block;
   width: $login-width;
   height: $login-height;
@@ -17,12 +45,40 @@ $logo-width: (96px);
 $logo-height: (97px);
 $logo-bg-image: url(../img/icon.png);
 $logo-bg-position: (0px) (0px);
-$logo-bg-size: (125px) (97px);
+$logo-bg-size: (132px) (97px);
 .i-logo{
   display: inline-block;
   width: $logo-width;
   height: $logo-height;
   background: $logo-bg-image $logo-bg-position no-repeat;
   background-size: $logo-bg-size;
+}
+@mixin i-logo(){
+  display: inline-block;
+  width: $logo-width;
+  height: $logo-height;
+  background: $logo-bg-image $logo-bg-position no-repeat;
+  background-size: $logo-bg-size;
+}
+
+// redStar 图片:
+$redStar-width: (16px);
+$redStar-height: (16px);
+$redStar-bg-image: url(../img/icon.png);
+$redStar-bg-position: (-106px) (-62px);
+$redStar-bg-size: (132px) (97px);
+.i-redStar{
+  display: inline-block;
+  width: $redStar-width;
+  height: $redStar-height;
+  background: $redStar-bg-image $redStar-bg-position no-repeat;
+  background-size: $redStar-bg-size;
+}
+@mixin i-redStar(){
+  display: inline-block;
+  width: $redStar-width;
+  height: $redStar-height;
+  background: $redStar-bg-image $redStar-bg-position no-repeat;
+  background-size: $redStar-bg-size;
 }
 

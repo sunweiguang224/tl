@@ -14,9 +14,35 @@
     <div class="g-middle">
       <div class="g-middle-left">
         @@include('widget/m-searchArea.tpl')
+        <div class="g-middle-left-articles">
+          <div class="tab">
+            <span class="sheet seleted">最近更新</span>
+            <span class="sheet">法律法规</span>
+            <span class="sheet">局级文件</span>
+            <span class="sheet">企业标准</span>
+            <span class="sheet">行业标准</span>
+            <a class="more" href="">更多>></a>
+          </div>
+          <div class="articles">
+            @@include('widget/m-article.tpl')
+          </div>
+        </div>
       </div>
       <div class="g-middle-right">
+        <div class="g-middle-right-top">
+          <div class="g-middle-right-login">
+            <p><input class="username" type="text" placeholder="用户名"/></p>
+            <p><input class="password" type="password" placeholder="密码"/></p>
+            <p>
+              <input class="code" type="text">
+              <img class="codePic" src="./img/code.png" alt="验证码">
+            </p>
+            <div class="loginBtn">登陆</div>
+          </div>
+        </div>
+        <div class="g-middle-right-bottom">
 
+        </div>
       </div>
     </div>
 	</div>

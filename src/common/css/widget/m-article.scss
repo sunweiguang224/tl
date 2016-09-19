@@ -1,0 +1,67 @@
+@import '../util/variable';
+@import '../util/_mixin';
+@import '../_icon';
+
+/*文章*/
+.m-article{
+  margin-top: 11px;
+  background-color: $pannelColor;
+  &:before{
+    content: '';
+  }
+}
+.m-article-title{
+  padding: 18px 13px 0;
+  @include children-va();
+  .words{
+    font-size: 16px;
+    color: #3a3a3a;
+    &:before{
+      content: '';
+      @include circle(3px);
+      background-color: #ffab09;
+      margin-right: 8px;
+      vertical-align: middle;
+      margin-top: -2px;
+    }
+  }
+  .i-redStar{
+    vertical-align: middle;
+    margin-left: 12px
+  }
+  .date{
+    font-size: 12px;
+    color: #666666;
+    float: right;
+  }
+}
+.m-article-desc{
+  padding: 5px 20px;
+  line-height: 24px;
+  font-size: 12px;
+  color: #616161;
+  @include ellipsis(2);
+}
+.m-article-splitLine{
+  margin-left: 7px;
+  margin-top: 10px;
+  border-top: 1px solid #e8e8e8;
+}
+.m-article-operation{
+  padding: 0 13px;
+  .standard{
+    @include height(40px);
+    color: #7b7b7b;
+  }
+  .cmtBtn{
+    float: right;
+    @include height(40px);
+    color: #464646;
+    cursor: pointer;
+    @include children-va;
+    i{
+      margin-right: 10px;
+      margin-top: -3px;
+    }
+  }
+}

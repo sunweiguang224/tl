@@ -48,13 +48,13 @@
 
 /*
   功能：盒阴影
-  @param {number} $h 水平距离.
-  @param {number} $v 垂直距离.
+  @param {number} $h 水平位置.
+  @param {number} $v 垂直位置.
   @param {number} $blur 模糊距离.
   @param {number} $color 阴影颜色.
 */
-@mixin box-shadow($h:1px, $v:1px, $blur:1px, $color:black) {
-  box-shadow: $h $v $blur $color;
+@mixin box-shadow($h:1px, $v:1px, $blur:1px, $color:black, $direction: outset) {
+  box-shadow: $h $v $blur $color $direction;
 }
 
 /*

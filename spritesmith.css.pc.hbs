@@ -12,5 +12,12 @@ ${{name}}-bg-size: ({{total_width}}px) ({{total_height}}px);
   background: ${{name}}-bg-image ${{name}}-bg-position no-repeat;
   background-size: ${{name}}-bg-size;
 }
+@mixin i-{{name}}(){
+  display: inline-block;
+  width: ${{name}}-width;
+  height: ${{name}}-height;
+  background: ${{name}}-bg-image ${{name}}-bg-position no-repeat;
+  background-size: ${{name}}-bg-size;
+}
 
 {{/sprites}}
