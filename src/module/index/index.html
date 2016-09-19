@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="{{path}}/common/css/common.pc{{min}}.css">
 	<link rel="stylesheet" href="{{path}}/module/index/css/index{{min}}.css">
 </head>
-<body>
+<body class="logined?">
   @@include('widget/m-topMenu.tpl')
 	<div class="g-container">
     <div class="g-middle">
       <div class="g-middle-left">
-        @@include('widget/m-searchArea.tpl')
+        @@include('widget/m-search.tpl')
         <div class="g-middle-left-articles">
-          <div class="tab">
+          <div class="m-tab">
             <span class="sheet seleted">最近更新</span>
             <span class="sheet">法律法规</span>
             <span class="sheet">局级文件</span>
@@ -25,11 +25,20 @@
           </div>
           <div class="articles">
             @@include('widget/m-article.tpl')
+            @@include('widget/m-article.tpl')
+            @@include('widget/m-article.tpl')
+            @@include('widget/m-article.tpl')
+            @@include('widget/m-article.tpl')
+            @@include('widget/m-article.tpl')
+            @@include('widget/m-article.tpl')
+            @@include('widget/m-article.tpl')
+            @@include('widget/m-article.tpl')
           </div>
         </div>
       </div>
       <div class="g-middle-right">
         <div class="g-middle-right-top">
+          <!--登陆-->
           <div class="g-middle-right-login">
             <p><input class="username" type="text" placeholder="用户名"/></p>
             <p><input class="password" type="password" placeholder="密码"/></p>
@@ -39,11 +48,111 @@
             </p>
             <div class="loginBtn">登陆</div>
           </div>
+          <!--个人信息-->
+          <div class="g-middle-right-personalInfo">
+            <div class="top">
+              <div class="left">
+                <p class="date">2016-08-01</p>
+                <p class="weekday">星期一</p>
+              </div>
+              <span class="right">
+                <p class="apm">PM</p>
+                <p class="time">03:24</p>
+              </span>
+            </div>
+            <div class="middle">
+              <div class="info">
+                <img src="./img/head.png">
+                <span class="words">
+                  <p class="name">徐延亮</p>
+                  <p class="desc">普通用户</p>
+                </span>
+              </div>
+            </div>
+            <div class="bottom">
+              <span class="left">
+                我的消息：<span class="myMsgNum">3</span>
+              </span>
+              <span class="right">
+                消息列表：<span class="msgListNum">30</span>
+              </span>
+            </div>
+          </div>
         </div>
-        <div class="g-middle-right-bottom">
-
+        <div class="g-middle-right-notice">
+          <div class="g-middle-right-notice-title">
+            <i class="i-horn"></i>
+            <span class="words">公告通知</span>
+            <a class="more" href="">更多>></a>
+          </div>
+          <ul class="g-middle-right-notice-list">
+            <li>
+              <span class="words"><a href="">北京工务段2016年8月份排</a></span>
+              <span class="date">08-01</span>
+            </li>
+            <li>
+              <span class="words"><a href="">北京工务段2016年8月份排</a></span>
+              <span class="date">08-01</span>
+            </li>
+            <li>
+              <span class="words"><a href="">北京工务段2016年8月份排</a></span>
+              <span class="date">08-01</span>
+            </li>
+            <li>
+              <span class="words"><a href="">北京工务段2016年8月份排北京工务段2016年8月份排</a></span>
+              <span class="date">08-01</span>
+            </li>
+            <li>
+              <span class="words"><a href="">北京工务段2016年8月份排北京工务段2016年8月份排</a></span>
+              <span class="date">08-01</span>
+            </li>
+            <li>
+              <span class="words"><a href="">北京工务段2016年8月份排北京工务段2016年8月份排</a></span>
+              <span class="date">08-01</span>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
+    <div class="g-pic">
+      <div class="m-tab">
+        <span class="sheet seleted">图文视窗</span>
+        <a class="more" href="">更多>></a>
+      </div>
+      <ul class="g-pic-list">
+        <li>
+          <p class="pic"><img src="./img/picDemo1.jpg"></p>
+          <p class="title">北京工务段宣传片</p>
+        </li>
+        <li>
+          <p class="pic"><img src="./img/picDemo1.jpg"></p>
+          <p class="title">北京工务段宣传片</p>
+        </li>
+        <li>
+          <p class="pic"><img src="./img/picDemo1.jpg"></p>
+          <p class="title">北京工务段宣传片</p>
+        </li>
+        <li>
+          <p class="pic"><img src="./img/picDemo1.jpg"></p>
+          <p class="title">北京工务段宣传片</p>
+        </li>
+        <li>
+          <p class="pic"><img src="./img/picDemo1.jpg"></p>
+          <p class="title">北京工务段宣传片</p>
+        </li>
+        <li>
+          <p class="pic"><img src="./img/picDemo1.jpg"></p>
+          <p class="title">北京工务段宣传片</p>
+        </li>
+        <li>
+          <p class="pic"><img src="./img/picDemo1.jpg"></p>
+          <p class="title">北京工务段宣传片</p>
+        </li>
+        <li>
+          <p class="pic"><img src="./img/picDemo1.jpg"></p>
+          <p class="title">北京工务段宣传片</p>
+        </li>
+      </ul>
     </div>
 	</div>
 	<script src="{{path}}/common/js/common.bundle{{min}}.js"></script>

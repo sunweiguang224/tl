@@ -22,7 +22,7 @@ Path.src = {
   },
 	img: [
     Path.srcRoot + '/*common/img/{*.png, *.jpg}',
-    Path.srcRoot + '/*module/'+moduleName+'/img/{*.png, *.jpg}'
+    Path.srcRoot + '/*module/'+moduleName+'/img/*.*'
   ],
 	html: Path.srcRoot + '/*module/'+moduleName+'/*.html',
 	js: {

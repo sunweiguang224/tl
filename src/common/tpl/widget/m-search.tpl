@@ -1,5 +1,5 @@
-<div class="m-searchArea">
-  <div class="m-searchArea-keywords">
+<div class="m-search">
+  <div class="m-search-keywords">
     <span class="keyword">全站</span>
     <span class="keyword">标题</span>
     <span class="keyword">关键字</span>
@@ -10,7 +10,7 @@
     <span class="keyword">关键字检索</span>
     <span class="keyword">全文检索</span>
   </div>
-  <div class="m-searchArea-searchBox">
+  <div class="m-search-searchBox">
     <input/>
     <span class="btn">搜索</span>
   </div>

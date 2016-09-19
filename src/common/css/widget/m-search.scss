@@ -2,11 +2,11 @@
 @import '../util/_mixin';
 
 /*搜索栏*/
-.m-searchArea{
+.m-search{
   height: 110px;
   background-color: $pannelColor;
 }
-.m-searchArea-keywords{
+.m-search-keywords{
   padding: 30px 102px 0;
   color: #666;
   .keyword{
@@ -17,7 +17,7 @@
     }
   }
 }
-.m-searchArea-searchBox{
+.m-search-searchBox{
   margin-top: 5px;
   padding-left: 100px;
   @include children-va(top);
@@ -37,6 +37,6 @@
     border: 1px solid #cdcccc;
     color: #fff;
     margin-left: -5px;
+    @include ha;
   }
-  @include click-effect('.btn');
 }

@@ -71,6 +71,9 @@ $topMenuHeight: 100px;
     margin-bottom: 7px;
     line-height: 14px;
   }
+  .loginBtn:before{
+    content: '登录';
+  }
 }
 
 .m-topMenu-content-login-num {

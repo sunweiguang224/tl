@@ -59,12 +59,26 @@
 
 /*
   功能：点击动效
-  @param {number} $selector 选择器.
 */
-@mixin click-effect($selector) {
-  #{$selector}:active {
+@mixin active {
+  &:active{
     opacity: 0.8;
   }
+}
+/*
+  功能：悬浮动效
+*/
+@mixin hover {
+  &:hover{
+    opacity: 0.9;
+  }
+}
+/*
+  功能：悬浮点击动效
+*/
+@mixin ha {
+  @include active;
+  @include hover;
 }
 
 // Clearfix

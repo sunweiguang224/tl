@@ -1,12 +1,13 @@
 @charset "UTF-8";
 @import '../../../common/css/util/variable';
 @import '../../../common/css/util/_mixin';
-@import '../../../common/css/widget/m-searchArea';
+@import '../../../common/css/widget/m-search';
 @import '_icon';
 
 /*中间区域*/
 .g-middle{
   padding-top: 11px;
+  @include clearfix;
 }
 .g-middle-left{
   float: left;
@@ -19,54 +20,64 @@
 
 /*文章区域*/
 .g-middle-left-articles{
-  .tab{
-    $darkColor: #107ac4;
-    margin-top: 10px;
-    border-bottom: 3px solid $darkColor;
+
+  .articles{
+    height: 800px;
     overflow: hidden;
-    color: $darkColor;
-    .sheet{
-      display: inline-block;
+  }
+}
+/*tab组件*/
+.m-tab{
+  $darkColor: #107ac4;
+  margin-top: 10px;
+  border-bottom: 3px solid $darkColor;
+  overflow: hidden;
+  color: $darkColor;
+  .sheet{
+    display: inline-block;
+    margin-right: 10px;
+    height: 34px;
+    line-height: 38px;
+    padding: 0 30px 0 10px;
+    background-color: $pannelColor;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 0 3px #e3e3e3;
+    vertical-align: bottom;
+    &:before{
+      content: '';
+      @include i-book;
+      vertical-align: middle;
+      margin-top: -6px;
       margin-right: 10px;
-      height: 34px;
-      line-height: 38px;
-      padding: 0 30px 0 10px;
-      background-color: $pannelColor;
-      font-size: 14px;
-      cursor: pointer;
-      box-shadow: 0 0 3px #e3e3e3;
-      vertical-align: bottom;
+      visibility: hidden;
+    }
+    &:hover, &.seleted{
+      background: $darkColor;
+      color: $pannelColor;
       &:before{
-        content: '';
-        @include i-notebook;
-        vertical-align: middle;
-        margin-top: -6px;
-        margin-right: 10px;
-        visibility: hidden;
-      }
-      &:hover, &.seleted{
-        background: $darkColor;
-        color: $pannelColor;
-        &:before{
-          visibility: visible;
-        }
+        visibility: visible;
       }
     }
-    .more{
-      display: inline-block;
-      height: 34px;
-      line-height: 38px;
-      float: right;
-    }
+    @include ha;
+  }
+  .more{
+    display: inline-block;
+    margin-right: 16px;
+    height: 34px;
+    line-height: 38px;
+    float: right;
   }
 }
 
 .g-middle-right-top{
   height: 260px;
-  padding: 20px;
   background-color: $pannelColor;
 }
+/*登陆*/
 .g-middle-right-login{
+  box-sizing: border-box;
+  padding: 20px;
   p{
     @include children-va;
   }
@@ -101,6 +112,179 @@
     @include btn;
     width: 100%;
     border-radius: 4px;
+    @include ha;
   }
-  @include click-effect('.loginBtn');
+}
+
+/*个人信息*/
+.g-middle-right-personalInfo{
+  height: 100%;
+  background-color: $pannelColor;
+  color: #fff;
+  line-height: 1;
+  display: none;
+  .top{
+    height: 93px;
+    background-color: #0d489e;
+    @include children-va(top);
+    .left{
+      width: 40%;
+      height: 100%;
+      border-right: 1px solid #0556b4;
+      text-align: center;
+    }
+    .right{
+      height: 100%;
+      width: 58%;
+      text-align: center;
+    }
+  }
+  .date{
+    margin-top: 30px;
+  }
+  .weekday{
+    margin-top: 16px;
+    color: #fdd556;
+  }
+  .apm{
+    margin-top: 16px;
+    margin-left: 50px;
+  }
+  .time{
+    margin-top: 5px;
+    font-size: 30px;
+  }
+  .middle{
+    box-sizing: border-box;
+    height: 108px;
+    padding: 26px 0 0;
+  }
+  .info{
+    padding-left: 20px;
+    img{
+      @include circle(56px / 2);
+    }
+    .words{
+      display: inline-block;
+      margin-left: 12px;
+      height: 56px;
+      vertical-align: top;
+    }
+  }
+  .name{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #107ac4;
+  }
+  .desc{
+    margin-top: 15px;
+    color: #666666;
+  }
+  .bottom{
+    padding-top: 13px;
+    border-top: 1px solid #dedede;
+    color: #666666;
+    text-align: center;
+    > span{
+      display: inline-block;
+      width: 48%;
+      @include height(32px);
+    }
+    .left{}
+    .right{
+      border-left: 1px solid #dedede;
+    }
+  }
+  .myMsgNum{
+    color: #ff5d00;
+  }
+}
+
+/*公告*/
+.g-middle-right-notice{
+  margin-top: 12px;
+}
+.g-middle-right-notice-title{
+  background-color: #107ac4;
+  color: #fff;
+  @include children-va;
+  padding: 0 8px;
+  .i-horn{
+    position: relative;
+    //top: 2px;
+  }
+  .words{
+    margin-left: 8px;
+    @include height(36px);
+  }
+  .more{
+    float: right;
+    @include height(36px);
+  }
+}
+.g-middle-right-notice-list{
+  height: 644px;
+  background-color: $pannelColor;
+  color: #107ac4;
+  overflow: hidden;
+  li{
+    padding: 22px 8px 0 10px;
+    @include children-va(top);
+  }
+  .words{
+    display: inline-block;
+    width: 204px;
+    color: #434343;
+    @include ellipsis;
+  }
+  .date{
+    color: #666666;
+    float: right;
+  }
+}
+
+/*图文视窗*/
+.g-pic{
+  margin-bottom: 24px;
+  background-color: $pannelColor;
+  .m-tab .sheet:before{
+    @include i-notebook
+  }
+}
+.g-pic-list{
+  padding: 15px 0 20px;
+  @include ellipsis;
+  text-overflow: clip;
+  li{
+    margin: 0 15px;
+    display: inline-block;
+  }
+  .pic{
+    width: 195px;
+    height: 132px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .title{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #434343;
+    text-align: center;
+    overflow: hidden;
+  }
+}
+
+/*登录和退出显示不同的状态*/
+body.logined {
+  .m-topMenu-content-login .loginBtn:before{
+    content: '退出';
+  }
+  .g-middle-right-login{
+    display: none;
+  }
+  .g-middle-right-personalInfo{
+    display: block;;
+  }
 }

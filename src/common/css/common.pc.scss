@@ -11,6 +11,13 @@ body{
   background-color: #f6f6f6;
 }
 
+.none{
+  display: none !important;
+}
+.hidden{
+  visibility: hidden !important;
+}
+
 /*外层容器*/
 .g-container {
   width: $gContainerWith;
