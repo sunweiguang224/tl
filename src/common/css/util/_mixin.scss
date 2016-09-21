@@ -130,8 +130,17 @@
   功能：基本按钮
   @param {top|middle|bottom} $vAlign 对齐方式
 */
-@mixin btn(){
+@mixin btn($height: '', $width: ''){
   display: inline-block;
-  cursor: pointer;
+  @if ($height) {
+    @include height($height);
+  }
+  @if ($width) {
+    width: $width;
+  }
+  border-radius: 3px;
   text-align: center;
+  cursor: pointer;
+  // 无法选中文本
+  user-select: none;
 }
