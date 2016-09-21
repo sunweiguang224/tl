@@ -21,7 +21,7 @@ Path.src = {
     common: Path.srcRoot + '/*common/img/*/*'
   },
 	img: [
-    Path.srcRoot + '/*common/img/{*.png, *.jpg}',
+    Path.srcRoot + '/*common/img/*.*',
     Path.srcRoot + '/*module/'+moduleName+'/img/*.*'
   ],
 	html: Path.srcRoot + '/*module/'+moduleName+'/*.html',
