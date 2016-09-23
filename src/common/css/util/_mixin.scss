@@ -116,10 +116,10 @@
 }
 
 /*
-  功能：子元素设为inline-block并垂直对齐
+  功能：子元素水平排列并垂直居中
   @param {top|middle|bottom} $vAlign 对齐方式
 */
-@mixin children-va($vAlign: middle){
+@mixin level-children($vAlign: middle){
   > *{
     display: inline-block;
     vertical-align: $vAlign;

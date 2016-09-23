@@ -12,11 +12,11 @@ $topMenuHeight: 100px;
 .m-topMenu-content {
   margin: auto;
   width: $gContainerWith;
-  @include children-va(top);
+  @include level-children(top);
 }
 
 .m-topMenu-content-logo {
-  @include children-va;
+  @include level-children;
   .title {
     font-size: 30px;
   }
@@ -28,7 +28,7 @@ $topMenuHeight: 100px;
   vertical-align: bottom;
   text-align: center;
   font-size: 16px;
-  @include children-va(top);
+  @include level-children(top);
   .item {
     display: inline-block;
     width: 115px;

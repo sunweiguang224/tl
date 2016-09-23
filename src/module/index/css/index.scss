@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import '../../../common/css/util/variable';
-@import '../../../common/css/util/_mixin';
+@import '../../../common/css/util/mixin';
 @import '../../../common/css/widget/m-search';
-@import '_icon';
+@import 'icon';
 
 /*中间区域*/
 .g-middle{
@@ -79,29 +79,42 @@
   box-sizing: border-box;
   padding: 20px;
   p{
-    @include children-va;
+    position: relative;
+    input{
+      box-sizing: border-box;
+      display: inline-block;
+      width: 100%;
+      @include height(38px);
+      border: 1px solid #e6e5e5;
+      border-radius: 3px;
+      padding: 0 8px 0 36px;
+      margin-bottom: 10px;
+    }
   }
-  input{
-    box-sizing: border-box;
-    display: inline-block;
-    width: 100%;
-    @include height(38px);
-    border: 1px solid #e6e5e5;
-    border-radius: 3px;
-    padding: 0 8px 0 36px;
-    margin-bottom: 10px;
+  p.username{
+    i{
+      position: absolute;
+      top: 8px;
+      left: 14px;
+      z-index: 1;
+    }
   }
-  input.username{
-    background: url(../img/inputUser.png) no-repeat 11px 9px;
+  p.password{
+    i{
+      position: absolute;
+      top: 8px;
+      left: 14px;
+      z-index: 1;
+    }
   }
-  input.password{
-    background: url(../img/inputPass.png) no-repeat 12px 9px;
-  }
-  input.code{
-    width: 108px;
-    padding: 0 10px;
-    margin-bottom: 0;
-    margin-right: 10px;
+  p.code{
+    @include level-children;
+    input{
+      width: 108px;
+      padding: 0 10px;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
   }
   .loginBtn{
     margin-top: 30px;
@@ -126,7 +139,7 @@
   .top{
     height: 93px;
     background-color: #0d489e;
-    @include children-va(top);
+    @include level-children(top);
     .left{
       width: 40%;
       height: 100%;
@@ -207,7 +220,7 @@
 .g-middle-right-notice-title{
   background-color: #107ac4;
   color: #fff;
-  @include children-va;
+  @include level-children;
   padding: 0 8px;
   .i-horn{
     position: relative;
@@ -229,7 +242,7 @@
   overflow: hidden;
   li{
     padding: 22px 8px 0 10px;
-    @include children-va(top);
+    @include level-children(top);
   }
   .words{
     display: inline-block;

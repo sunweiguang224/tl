@@ -12,7 +12,7 @@
 }
 .m-article-title{
   padding: 18px 13px 0;
-  @include children-va();
+  @include level-children();
   .words{
     font-size: 16px;
     color: #3a3a3a;
@@ -64,7 +64,7 @@
     color: #464646;
     cursor: pointer;
     @include ha;
-    @include children-va;
+    @include level-children;
     i{
       margin-right: 10px;
       margin-top: -3px;

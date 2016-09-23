@@ -1,11 +1,12 @@
 @charset "UTF-8";
-@import './util/variable';
-@import './util/_mixin';
-@import './lib/_normalize';
-@import '_reset';
-@import '_icon';
-@import './widget/m-topMenu';
-@import './widget/m-article';
+
+@import 'util/variable';
+@import 'util/mixin';
+@import 'lib/normalize';
+@import 'reset';
+@import 'icon';
+@import 'widget/m-topMenu';
+@import 'widget/m-article';
 
 body{
   background-color: #f6f6f6;

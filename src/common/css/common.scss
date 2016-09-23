@@ -1,9 +1,9 @@
 @charset "UTF-8";
-@import './util/variable';
-@import './util/_mixin';
-@import './lib/_normalize';
-@import '_reset';
-@import '_icon';
+@import 'util/variable';
+@import 'util/mixin';
+@import 'lib/normalize';
+@import 'reset';
+@import 'icon';
 
 /*页面容器宽度*/
 $containerMinWidth: 360px;

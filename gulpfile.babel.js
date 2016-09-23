@@ -64,19 +64,21 @@ function compileCss(){
 		// 开发环境
 		.pipe(sourcemaps.init())	// 放到最开始才能对应原始的scss文件
 		.pipe(sass({outputStyle: 'uncompressed'}))
-		.pipe(autoprefixer({
-      browsers: ['last 2 versions']
-    }));
+    .pipe(sourcemaps.write({includeContent: false}))  // 使用处理之前的源文件，当CSS被多个插件处理时，要加这句话，否则对应关系会错乱
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'], cascade: false
+    }))
+  ;
 }
 gulp.task('task_css_dev', () => {
 	return compileCss()
-		.pipe(sourcemaps.write('./'))	// 写到目标css同级目录下
-		//.pipe(header('\/* This css was compiled at '+ getNow() +'. *\/\n'))
+    .pipe(sourcemaps.write('./'))	// 写到目标css同级目录下
 		.pipe(gulp.dest(Path.devRoot))
 		;
 });
 gulp.task('task_css_dist', () => {
 	return compileCss()
+    .pipe(header('\/* This css was compiled at '+ getNow() +'. *\/\n'))
 		.pipe(minifyCss())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(rev())
@@ -137,9 +139,6 @@ function webpackCompileJs(){
 	let webpackConfig = require("./webpack.config.js");
 	return gulp.src('')
 		.pipe(webpack(webpackConfig))
-		//.pipe(babel({		与tmodjs冲突，弃用
-		//	//presets: ['es2015']
-		//}))
 		.pipe(header('\/* This css was compiled at '+ getNow() +'. *\/\n'));
 }
 gulp.task('task_js_dev', () => {

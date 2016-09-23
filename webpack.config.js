@@ -6,9 +6,8 @@ import fs from 'fs';
 import webpack from 'webpack';
 import glob from 'glob';
 
-//export default {		// 有bug 原因不明
 var commonModulePath = __dirname + '/src/common/js/util';
-module.exports = {
+export default {
 	resolve: {
 		// 为公共资源指定别名，用的时候直接引用别名即可
 		alias: {

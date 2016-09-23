@@ -20,7 +20,7 @@
 .m-search-searchBox{
   margin-top: 5px;
   padding-left: 100px;
-  @include children-va(top);
+  @include level-children(top);
   input{
     @include height(36px);
     width: 578px;
