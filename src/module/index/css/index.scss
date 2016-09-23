@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import '../../../common/css/util/variable';
-@import '../../../common/css/util/mixin';
+@import '../../../common/css/util/all';
 @import '../../../common/css/widget/m-search';
 @import 'icon';
 
@@ -59,7 +58,7 @@
         visibility: visible;
       }
     }
-    @include ha;
+    @include click-animation;
   }
   .more{
     display: inline-block;
@@ -125,7 +124,7 @@
     @include btn;
     width: 100%;
     border-radius: 4px;
-    @include ha;
+    @include click-animation;
   }
 }
 

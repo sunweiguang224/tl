@@ -63,7 +63,7 @@
     @include height(40px);
     color: #464646;
     cursor: pointer;
-    @include ha;
+    @include click-animation;
     @include level-children;
     i{
       margin-right: 10px;

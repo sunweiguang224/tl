@@ -37,6 +37,6 @@
     border: 1px solid #cdcccc;
     color: #fff;
     margin-left: -5px;
-    @include ha;
+    @include click-animation;
   }
 }

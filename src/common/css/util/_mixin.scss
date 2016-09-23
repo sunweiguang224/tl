@@ -76,7 +76,7 @@
 /*
   功能：悬浮点击动效
 */
-@mixin ha {
+@mixin click-animation {
   @include active;
   @include hover;
 }
@@ -143,4 +143,5 @@
   cursor: pointer;
   // 无法选中文本
   user-select: none;
+  @include click-animation;
 }

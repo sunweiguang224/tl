@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
-@import 'util/variable';
-@import 'util/mixin';
 @import 'lib/normalize';
+@import 'util/_all';
+@import 'widget/m-article';
+@import 'widget/m-search';
+@import 'widget/m-topMenu';
 @import 'reset';
 @import 'icon';
 @import 'widget/m-topMenu';
