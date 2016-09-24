@@ -12,8 +12,6 @@
   <div class="m-article-splitLine"></div>
   <div class="m-article-operation">
     <span class="standard">国家级标准</span>
-    <span class="cmtBtn">
-      <i class="i-comment"></i>评论
-    </span>
+    <span class="cmtBtn">评论</span>
   </div>
 </div>

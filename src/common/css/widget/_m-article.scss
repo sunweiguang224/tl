@@ -24,10 +24,11 @@
       vertical-align: middle;
       margin-top: -2px;
     }
-  }
-  .i-redStar{
-    vertical-align: middle;
-    margin-left: 12px
+    &:after{
+      @include i-redStar;
+      margin-top: -4px;
+      margin-left: 12px;
+    }
   }
   .date{
     font-size: 12px;
@@ -65,9 +66,10 @@
     cursor: pointer;
     @include click-animation;
     @include level-children;
-    i{
-      margin-right: 10px;
+    &:before{
+      @include i-comment;
       margin-top: -3px;
+      margin-right: 10px;
     }
   }
 }

@@ -20,6 +20,9 @@ $topMenuHeight: 100px;
   .title {
     font-size: 30px;
   }
+  &:before{
+    @include i-logo;
+  }
 }
 
 .m-topMenu-content-menu {
@@ -64,27 +67,30 @@ $topMenuHeight: 100px;
   vertical-align: bottom;
   float: right;
   margin-top: 8px;
-  i {
+  .m-topMenu-content-login-num {
     position: relative;
+    display: inline-block;
     vertical-align: middle;
     margin-right: 20px;
     margin-bottom: 7px;
     line-height: 14px;
+    &:before{
+      @include i-login;
+    }
+    .num {
+      position: absolute;
+      right: -7px;
+      top: -4px;
+      @include square(14px);
+      border-radius: 4px;
+      background-color: #ffab09;
+      font-size: 12px;
+      text-align: center;
+      padding: 0 1px 2px 0;
+    }
   }
   .loginBtn:before{
     content: '登录';
   }
 }
 
-.m-topMenu-content-login-num {
-  position: absolute;
-  right: -7px;
-  top: -4px;
-  @include square(14px);
-  border-radius: 4px;
-  background-color: #ffab09;
-  font-size: 12px;
-  text-align: left;
-  padding-left: 2px;
-  padding-bottom: 1px;
-}

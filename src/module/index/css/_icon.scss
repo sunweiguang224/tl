@@ -4,6 +4,7 @@ $book-height: (20px);
 $book-bg-image: url(../img/icon.png);
 $book-bg-position: (-30px) (0px);
 $book-bg-size: (94px) (49px);
+/*
 .i-book{
   display: inline-block;
   width: $book-width;
@@ -11,7 +12,9 @@ $book-bg-size: (94px) (49px);
   background: $book-bg-image $book-bg-position no-repeat;
   background-size: $book-bg-size;
 }
+*/
 @mixin i-book(){
+  content: '';
   display: inline-block;
   width: $book-width;
   height: $book-height;
@@ -25,6 +28,7 @@ $horn-height: (19px);
 $horn-bg-image: url(../img/icon.png);
 $horn-bg-position: (0px) (0px);
 $horn-bg-size: (94px) (49px);
+/*
 .i-horn{
   display: inline-block;
   width: $horn-width;
@@ -32,7 +36,9 @@ $horn-bg-size: (94px) (49px);
   background: $horn-bg-image $horn-bg-position no-repeat;
   background-size: $horn-bg-size;
 }
+*/
 @mixin i-horn(){
+  content: '';
   display: inline-block;
   width: $horn-width;
   height: $horn-height;
@@ -46,6 +52,7 @@ $inputPass-height: (20px);
 $inputPass-bg-image: url(../img/icon.png);
 $inputPass-bg-position: (-81px) (0px);
 $inputPass-bg-size: (94px) (49px);
+/*
 .i-inputPass{
   display: inline-block;
   width: $inputPass-width;
@@ -53,7 +60,9 @@ $inputPass-bg-size: (94px) (49px);
   background: $inputPass-bg-image $inputPass-bg-position no-repeat;
   background-size: $inputPass-bg-size;
 }
+*/
 @mixin i-inputPass(){
+  content: '';
   display: inline-block;
   width: $inputPass-width;
   height: $inputPass-height;
@@ -67,6 +76,7 @@ $inputUser-height: (20px);
 $inputUser-bg-image: url(../img/icon.png);
 $inputUser-bg-position: (-57px) (0px);
 $inputUser-bg-size: (94px) (49px);
+/*
 .i-inputUser{
   display: inline-block;
   width: $inputUser-width;
@@ -74,7 +84,9 @@ $inputUser-bg-size: (94px) (49px);
   background: $inputUser-bg-image $inputUser-bg-position no-repeat;
   background-size: $inputUser-bg-size;
 }
+*/
 @mixin i-inputUser(){
+  content: '';
   display: inline-block;
   width: $inputUser-width;
   height: $inputUser-height;
@@ -88,6 +100,7 @@ $notebook-height: (20px);
 $notebook-bg-image: url(../img/icon.png);
 $notebook-bg-position: (0px) (-29px);
 $notebook-bg-size: (94px) (49px);
+/*
 .i-notebook{
   display: inline-block;
   width: $notebook-width;
@@ -95,7 +108,9 @@ $notebook-bg-size: (94px) (49px);
   background: $notebook-bg-image $notebook-bg-position no-repeat;
   background-size: $notebook-bg-size;
 }
+*/
 @mixin i-notebook(){
+  content: '';
   display: inline-block;
   width: $notebook-width;
   height: $notebook-height;

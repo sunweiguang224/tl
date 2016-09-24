@@ -91,7 +91,8 @@
     }
   }
   p.username{
-    i{
+    &:before{
+      @include i-inputUser;
       position: absolute;
       top: 8px;
       left: 14px;
@@ -100,6 +101,13 @@
   }
   p.password{
     i{
+      position: absolute;
+      top: 8px;
+      left: 14px;
+      z-index: 1;
+    }
+    &:before{
+      @include i-inputPass;
       position: absolute;
       top: 8px;
       left: 14px;
@@ -221,9 +229,8 @@
   color: #fff;
   @include level-children;
   padding: 0 8px;
-  .i-horn{
-    position: relative;
-    //top: 2px;
+  &:before{
+    @include i-horn;
   }
   .words{
     margin-left: 8px;

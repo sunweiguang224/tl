@@ -32,3 +32,8 @@ img {
 iframe {
   border: none;
 }
+
+:before,
+:after{
+  vertical-align: middle;
+}

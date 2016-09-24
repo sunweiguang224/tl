@@ -2,7 +2,6 @@
 <div class="m-topMenu">
   <div class="m-topMenu-content">
       <span class="m-topMenu-content-logo">
-        <i class="i-logo"></i>
         <span class="title">标准管理系统</span>
       </span>
     <ul class="m-topMenu-content-menu">
@@ -25,9 +24,9 @@
       <li class="item"><a href="">资料下载</a></li>
     </ul>
       <span class="m-topMenu-content-login">
-        <i class="i-login">
-          <span class="m-topMenu-content-login-num">4</span>
-        </i>
+        <span class="m-topMenu-content-login-num">
+          <span class="num">4</span>
+        </span>
         <a class="loginBtn" href=""></a>
       </span>
   </div>
