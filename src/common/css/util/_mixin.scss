@@ -145,3 +145,41 @@
   user-select: none;
   @include click-animation;
 }
+
+/*
+  功能：垂直居中+水平居中
+  注意：父元素定位必须为relative、absolute、fixed之一。
+*/
+@mixin center(){
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/*
+  功能：三角形
+  @param {0-360deg} $deg 箭头方向，默认向上
+  @param {number} $height 箭头高度
+*/
+@mixin triangle($deg: 0deg, $height: 5px, $color: red){
+  $g2: 1.414; // 根号2
+  position: relative;
+  display: inline-block;
+  height: $height;
+  width: $height * 2;
+  overflow: hidden;
+  transform: rotate($deg);
+  &:after{
+    content: '';
+    @include center;
+    margin-bottom: - $height / $g2;
+    display: inline-block;
+    height: $height * $g2;
+    width: $height * $g2;
+    transform: rotate(45deg);
+    background-color: $color;
+  }
+}
