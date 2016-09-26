@@ -7,7 +7,8 @@ import webpack from 'webpack';
 import glob from 'glob';
 
 var commonModulePath = __dirname + '/src/common/js/util';
-export default {
+module.exports = {
+//export default {
 	resolve: {
 		// 为公共资源指定别名，用的时候直接引用别名即可
 		alias: {
@@ -19,13 +20,14 @@ export default {
 	},
 	entry: function(path) {
 		var entry = {
-			commons: ['helper', 'setting', 'ua', 'util']		// JS工具
+			commons: ['helper', 'setting'/*, 'ua'*/, 'util']		// JS工具
 		};
 		var files = glob.sync(path);
 		for (var i = 0; i < files.length; i++) {
 			var file = files[i];		// 读取文件路径
 			var moduleName = file.replace(Path.srcRoot+'/', '').replace('.js', '');	// 文件编译后路径
 			entry[moduleName] = './' + file;
+      console.log(file)
 		}
 		return entry;
 	}(Path.src.js.module),
