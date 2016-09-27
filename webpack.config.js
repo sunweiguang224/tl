@@ -5,32 +5,38 @@ import Path from './path.js';
 import fs from 'fs';
 import webpack from 'webpack';
 import glob from 'glob';
+import path from 'path';
 
-var commonModulePath = __dirname + '/src/common/js/util';
 module.exports = {
 //export default {
 	resolve: {
-		// 为公共资源指定别名，用的时候直接引用别名即可
-		alias: {
-			helper: commonModulePath + '/helper.js',
-      setting: commonModulePath + '/setting.js',
-      ua: commonModulePath + '/ua.js',
-      util: commonModulePath + '/util.js',
-		}
+    // 为src/common/js/*/*.js文件提供别名
+		alias: (function(){
+      var alias = {};
+      var filePaths = glob.sync(Path.srcRoot + '/common/js/*/*.js');
+      for(var i in filePaths) {
+        var filePath = filePaths[i];
+        alias[path.basename(filePath)] = __dirname+'/'+filePath;
+      }
+      console.log(alias);
+      return alias;
+    })()
 	},
+  // 业务js
 	entry: function(path) {
 		var entry = {
-			commons: ['helper', 'setting'/*, 'ua'*/, 'util']		// JS工具
+			//commons: ['helper', 'setting', 'util']		// 此处指定的公共模块会被打包到common.js
 		};
-		var files = glob.sync(path);
-		for (var i = 0; i < files.length; i++) {
-			var file = files[i];		// 读取文件路径
-			var moduleName = file.replace(Path.srcRoot+'/', '').replace('.js', '');	// 文件编译后路径
-			entry[moduleName] = './' + file;
-      console.log(file)
+		var filePaths = glob.sync(path);
+		for (var i in filePaths) {
+			var filePath = filePaths[i];		// 读取文件路径
+			var moduleName = filePath.replace(Path.srcRoot+'/', '').replace('.js', '');	// 文件编译后路径
+			entry[moduleName] = './' + filePath;
 		}
+    console.log(entry);
 		return entry;
 	}(Path.src.js.module),
+  // 插件
   plugins: [
     // 将公共代码抽离出来合并为一个文件
     new webpack.optimize.CommonsChunkPlugin({
@@ -38,21 +44,16 @@ module.exports = {
       filename: 'common/js/common.bundle.js',
       minChunks: 5
     }),
-    // 提供全局的变量，在模块(entry指定的)中使用无需用require引入，
+    /*
+    * 提供全局的变量，在模块(entry指定的)中使用无需用require引入
+    * 此处把jQuery变量提供给jquery-lazyload（因jquery-lazyload内部没有require('jquery')）
+    */
     new webpack.ProvidePlugin({
-      jQuery: "jquery", // jQuery变量提供给jquery-lazyload（因jquery-lazyload内部没有require('jquery')）
-      $: "jquery",
-      // 下面的暂不使用，哪个页面用就动态引入，提高效率（因提供变量时会执行该变量的生成函数）
-      /*_: 'underscore',
-      helper: "helper",
-      setting: "setting",
-      ua: "ua",
-      util: "util",*/
+      jQuery: "jquery",
+      $: "jquery"
     }),
   ],
 	output: {
-		//path: __dirname + '/.build/js',	//__dirname 是当前模块文件所在目录的完整绝对路径
-		//publicPath: '../../js/',		//网站运行时的访问路径 未知
 		filename: "[name].bundle.js"
 	},
 	module: {
