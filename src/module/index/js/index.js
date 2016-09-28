@@ -5,7 +5,8 @@
  */
 var path = require('path.js');
 var helper = require('helper.js');
-require('lazyLoadImg.js');
+require('lazyload.js');
+var $ = require('jquery.js');
 
 function Biz() {
 	var $body = $('body');

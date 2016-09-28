@@ -42,16 +42,16 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: "commons",
       filename: 'common/js/common.bundle.js',
-      minChunks: 5
+      minChunks: 2
     }),
     /*
     * 提供全局的变量，在模块(entry指定的)中使用无需用require引入
     * 此处把jQuery变量提供给jquery-lazyload（因jquery-lazyload内部没有require('jquery')）
     */
-    new webpack.ProvidePlugin({
-      jQuery: "jquery",
-      $: "jquery"
-    }),
+    //new webpack.ProvidePlugin({
+    //  jQuery: "jquery.js",
+    //  $: "jquery.js"
+    //}),
   ],
 	output: {
 		filename: "[name].bundle.js"

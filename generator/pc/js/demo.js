@@ -3,11 +3,10 @@
  * 功能描述: ${{desc}}
  * 作者: ${{author}}
  */
-var helper = require('helper');
-var setting = require('setting');
-var ua = require('ua');
-var util = require('util');
-var _ = require('underscore');
+var $ = require('jquery.js');
+var path = require('path.js');
+var helper = require('helper.js');
+require('lazyload.js');
 
 function Biz() {
 	var $body = $('body');

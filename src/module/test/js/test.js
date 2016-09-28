@@ -1,7 +1,7 @@
 /**
- * 页面: ${{title}}
- * 功能描述: ${{desc}}
- * 作者: ${{author}}
+ * 页面: 
+ * 功能描述: 
+ * 作者: swg
  */
 var $ = require('jquery.js');
 var path = require('path.js');

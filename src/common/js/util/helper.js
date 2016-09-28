@@ -1,3 +1,6 @@
+/**
+ * 功能描述：为artTemplate提供工具方法
+ */
 var template = require('tmodjs-loader/runtime');
 var dateFormat = require('../module/dateFormat.js');
 
