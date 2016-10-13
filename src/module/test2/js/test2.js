@@ -16,3 +16,10 @@ function Biz() {
 
 }
 new Biz();
+
+
+var param = require('param.js');
+
+//console.info(param.get('wef'))
+console.info(param.toObj())
+console.info(param.toStr(param.toObj()))
