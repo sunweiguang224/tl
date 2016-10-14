@@ -1,4 +1,4 @@
-var jQuery = require("jquery.js");  // add by swg
+var jQuery = require("./jquery.js");  // add by swg
 /*!
  * Lazy Load - jQuery plugin for lazy loading images
  *

@@ -3,10 +3,10 @@
  * 功能描述: 首页
  * 作者: swg
  */
-var path = require('path.js');
-var helper = require('helper.js');
-require('lazyload.js');
-var $ = require('jquery.js');
+var path = require('path');
+var helper = require('helper');
+require('lazyload');
+var $ = require('jquery');
 
 function Biz() {
 	var $body = $('body');

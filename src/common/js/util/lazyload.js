@@ -1,8 +1,8 @@
 /**
  * 功能描述：为class带有lazy的图片提供懒加载
  */
-var $ = require('jquery.js');
-require('jquery.lazyload.js');
+var $ = require('../lib/jquery.js');
+require('../lib/jquery.lazyload.js');
 
 $('img.lazy').lazyload({
   threshold: 0,

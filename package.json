@@ -66,6 +66,7 @@
     "minimist": "^1.2.0",
     "nrm": "^1.0.0",
     "swg-js": "^1.0.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "uuid": "^2.0.3"
   }
 }

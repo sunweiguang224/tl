@@ -16,7 +16,7 @@ module.exports = {
       var filePaths = glob.sync(Path.srcRoot + '/common/js/*/*.js');
       for(var i in filePaths) {
         var filePath = filePaths[i];
-        alias[path.basename(filePath)] = __dirname+'/'+filePath;
+        alias[path.basename(filePath).replace('.js', '')] = __dirname+'/'+filePath;
       }
       console.log(alias);
       return alias;
