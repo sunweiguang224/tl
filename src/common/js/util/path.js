@@ -1,6 +1,6 @@
 /**
  * 功能描述：path全局变量
  */
-module.export = {
+module.exports = {
   interface: '../../../common/js/',
 };

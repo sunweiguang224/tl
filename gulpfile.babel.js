@@ -43,6 +43,12 @@ function getNow(){
 	return mt.format("YYYY-MM-DD HH:mm:ss ") + mt.millisecond();
 }
 
+/* 获取工程名称 */
+function getProjectName(){
+  var arr = __dirname.split('\\');
+  return arr[arr.length - 1];
+}
+
 // ************************************ 编译目录清理 ************************************
 gulp.task('task_clean_dev', () => {
 	console.log('>>>>>>>>>>>>>>> 开发目录开始清理。' + getNow());
@@ -185,7 +191,7 @@ function compileHtml(options){
       prefix: '@@',
       basepath: __dirname + '/src/common/tpl/'
     }))
-    .pipe(replace('{{path}}', '../..'))
+    .pipe(replace('{{path}}', options.path))
     .pipe(replace('{{min}}', options.compress))
   ;
 }
@@ -193,6 +199,8 @@ gulp.task('task_html_dev', () => {
   return compileHtml({
     src: [Path.src.html],
     compress: '',
+    //path: '/' + getProjectName() + '/' + Path.devRoot
+    path: '/' + Path.devRoot  // nodejs
   })
   .pipe(gulp.dest(Path.devRoot))
   ;
@@ -200,7 +208,9 @@ gulp.task('task_html_dev', () => {
 gulp.task('task_html_dist', () => {
   return compileHtml({
     src: [Path.src.html, Path.tempRoot + '/rev-manifest/*.json'],
-    compress: '.min'
+    compress: '.min',
+    //path: '/' + getProjectName() + '/' + Path.distRoot
+    path: '/' + Path.distRoot  // nodejs
   })
   .pipe(revCollector())
   .pipe(minifyHtml())
