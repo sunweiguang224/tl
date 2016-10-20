@@ -37,12 +37,9 @@ server.use(function(err, req, res, next) {
 });
 
 /*启动监听*/
-var http = server.listen(10001, function(){
+var http = server.listen(9000, function(){
   console.log('http服务已启动'+JSON.stringify(http.address()));
 });
-var http = server.listen(10002, function(){
-  console.log('http服务已启动'+JSON.stringify(http.address()));
-});
-var http = server.listen(10003, function(){
+var http = server.listen(9001, function(){
   console.log('http服务已启动'+JSON.stringify(http.address()));
 });
